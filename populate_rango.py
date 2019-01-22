@@ -7,11 +7,11 @@ django.setup()
 from rango.models import Category, Page
 
 def populate():
-# First, we will create lists of dictionaries containing the pages
-# we want to add into each category.
-# Then we will create a dictionary of dictionaries for our categories.
-# This might seem a little bit confusing, but it allows us to iterate
-# through each data structure, and add the data to our models.
+    # First, we will create lists of dictionaries containing the pages
+    # we want to add into each category.
+    # Then we will create a dictionary of dictionaries for our categories.
+    # This might seem a little bit confusing, but it allows us to iterate
+    # through each data structure, and add the data to our models.
 
     python_pages = [
         {"title": "Official Python Tutorial",
@@ -36,8 +36,8 @@ def populate():
         "url":"http://flask.pocoo.org"} ]
 
     cats = {"Python": {"pages": python_pages},
-        "Django": {"pages": django_pages},
-        "Other Frameworks": {"pages": other_pages} }
+            "Django": {"pages": django_pages},
+            "Other Frameworks": {"pages": other_pages} }
 
 # If you want to add more catergories or pages,
 # add them to the dictionaries above.
@@ -73,4 +73,5 @@ def add_cat(name):
 # Start execution here!
 if __name__ == '__main__':
     print("Starting Rango population script...")
-    populate()
+    populate()
+
